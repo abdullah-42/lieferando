@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Lieferando</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  <link rel="icon" href="img/png/logo.png" />
+  <script src="script.js" defer></script>
+  <script src="warenkorb.js" defer></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+</head>
+
+
+
+
+
+<body onload="render()">
+
+  <div class="container">
+
+    <div class="header-container">
+      <div class="header">
+        <div class="logo">
+          <img src="img/png/logo.png" alt="logo" />
+          <p>Lieferando</p>
+        </div>
+        <div class="header-right">
+          <img class="language" src="img/png/german.svg" alt="language" />
+          <img class="warenkorb-icon" onclick="showWarenkorb()" src="img/png/warenkorb.png" alt="Warenkorb" />
+        </div>
+      </div>
+    </div>
+
+
+    <div class="main-container">
+
+      <div class="main">
+        <img src="img/homeImgjpg.jpg" alt="main pic" />
+
+        <div class="title-area">
+          <div class="title">
+            <h1>Pizzeria Casablanca</h1>
+            <div class="title-area-buttons">
+              <i class="bi bi-info-circle"></i>
+              <i class="bi bi-suit-heart" id="heart"></i>
+            </div>
+          </div>
+          <div>
+            <div class="bewertung">
+              <img src="img/png/bewertung.png" alt="stars" />
+              <a href="#">1.9k Bewertungen</a>
+            </div>
+            <div class="delivery-stats">
+              <img src="img/png/timer.png" alt="delivery time" style="width: 12px;" />
+              <p>20-45 min
+              <p class="delivery-punkt">•</p>
+              </p>
+
+              <img src="img/png/fahrrad.png" alt="delivery price" style="width: 18px;" />
+              <p>1,50 €
+              <p class="delivery-punkt">•</p>
+              </p>
+
+              <img src="img/png/einkaufstasche.png" alt="min order price" style="width: 12px;" />
+              <p>Min. 30,00 €</p>
+            </div>
+            <span>
+              Bei diesem Restaurant kannst du Stempel sammeln. Stelle beim Bestellabschluss bitte sicher,
+              dass du dich für unseren Newsletter angemeldet hast, um deine Stempel per E-Mail zu erhalten.
+            </span>
+          </div>
+        </div>
+
+        <!-- Dishes Buttons -->
+        <div class="dishesNav">
+          <div class="search-buttons">
+            <a id="searchBtn"><img src="img/png/search.png" alt="" onclick="searchShow()"></a>
+            <input type="text" class="search-input d-none" onkeyup="render()" id="search-input">
+            <div class="search-nav" id="search-nav">
+              <a class=" scroll-left"><img src="img/png/arrowLeft.png" alt=""></a>
+              <div class="meal-buttons">
+                <a href="#Beliebt" class="clickedButton">Beliebt</a>
+                <a href="#Salate">Salate</a>
+                <a href="#Pizza">Pizza</a>
+                <a href="#Calzone">Calzone</a>
+                <a href="#Drehspieß">Drehspießgerichte</a>
+                <a href="#Teller">Tellergerichte</a>
+                <a href="#Pasta">Pasta</a>
+                <a href="#Baguettes">Baguettes</a>
+                <a href="#Schnitzel">Schnitzel</a>
+                <a href="#Burger">Burger</a>
+              </div>
+              <a class="scroll-right"><img src="img/png/arrowRight.png" alt=""></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gerichte -->
+        <div class="groups" id="groups">
+        </div>
+
+        <footer onclick="showWarenkorb()">
+          <div class="clone-bill-button"></div>
+        </footer>
+
+      </div>
+
+      <!-- Warenkorb -->
+      <div class="warenkorb-container" id="hide-on-load" checked>
+        <div class="warenkorb" id="warenkorb">
+          <h2>Warenkorb</h2>
+          <i class="bi bi-bag" style="font-size: 40px; margin-bottom: -50px;"></i>
+          <div class="warenkorb-text">
+            <h2>Fülle deinen Warenkorb</h2>
+            <span>Füge einige leckere Gerichte aus der Speisekarte hinzu und bestelle dein Essen.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</body>
+
+</html>
